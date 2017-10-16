@@ -1,5 +1,31 @@
 function to_roman (num) {
   // your implementation code here
+  	const RomanNum = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+	const ArabNum = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+	let result = ''
+
+	if(num===0){
+		return ''
+	}
+
+	while(num>0){
+		//debugger
+
+		for(let i=0; i<ArabNum.length; i++){
+			if(num%ArabNum[i]<num){
+
+				num = num - ArabNum[i]
+				result +=RomanNum[i]
+				//console.log(result);
+			}
+
+			if(num===0){
+				return result
+			}
+		}	
+	}
+
+	return result
 }
 
 // Drive code
