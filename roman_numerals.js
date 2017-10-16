@@ -29,7 +29,7 @@ function to_roman (num) {
   }
 
   //puluhan
-  if(num>10 && num<100){
+  if(num>=10 && num<100){
     //ambil angka
     var puluhan = Number(String(num)[0]);
     var satuan = Number(String(num)[1]);
