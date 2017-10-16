@@ -1,5 +1,16 @@
 function to_roman (num) {
   // your implementation code here
+  var kamus = [[1000, 'M'], [500, 'D'],[400, 'CD'], [100, 'C'], [50, 'L'], [40, 'XL'], [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'] ,[1, 'I']]
+  var hasil = ''
+
+  for(var i = 0; i < kamus.length; i++) {
+    while(num >= kamus[i][0]) {
+      hasil = hasil + kamus[i][1]
+      num = num - kamus[i][0]
+    }
+  }
+
+  return hasil
 }
 
 // Drive code
