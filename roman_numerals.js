@@ -1,9 +1,6 @@
 function to_roman (num) {
   let roman = 
   [ 
-    [2000, 'MM'],
-    [1500, 'M'],
-    [1400, 'MCD'],
     [1000, 'M'],
     [900, 'CM'],
     [500, 'D'],
