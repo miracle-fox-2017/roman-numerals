@@ -1,6 +1,19 @@
-function to_roman (num) {
-  // your implementation code here
-}
+function to_roman(num) {
+	var angkaArab = [ 1000, 900, 500, 400, 100, 50, 40, 10, 9, 5, 4, 1 ]; 
+	var roman = 	 ['M', 'CM', 'D', 'CD', 'C', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+	var result = '';
+
+	for (var i = 0; i < angkaArab.length; i++) {
+		// console.log(num+" >= "+angkaArab[i]);
+
+		while (num >= angkaArab[i]) {
+			result = result + roman[i];
+			num = num - angkaArab[i];
+		}
+	}
+
+	return result;
+}	
 
 // Drive code
 console.log('My totally sweet testing script for new roman\n')
