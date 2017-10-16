@@ -1,5 +1,19 @@
-function to_roman (num) {
-  // your implementation code here
+function to_roman(angka){
+  let result = '';
+  let latin = [1000, 900, 500, 490, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  let romawi = ["M","CM", "D", 'XD', 'CD' ,"C", 'XC' , "L",'XL', "X", "IX", "V", "IV", "I"];
+
+  for(var i = 0; i < latin.length; i++){
+    
+    while (angka >= latin[i]){
+    
+    result += romawi[i];
+    angka -= latin[i];
+    
+    
+     }
+  }return result 
+
 }
 
 // Drive code
