@@ -1,5 +1,18 @@
 function to_roman (num) {
-  // your implementation code here
+  // menerima angka 1 - 3000, dan me return string angka romawi
+  var hasil = '';
+  var arabic = [1000, 900, 500, 400, 100,90, 50, 40, 10, 9, 5, 4, 1]
+  var romawi = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL' ,'X', 'IX', 'V', 'IV', 'I']
+  // EX 13 >>> 10 + 1 + 1 + 1
+
+  for (var i = 0; i < arabic.length; i++){
+    // ketika num nya 3, romawinya ditambah 'I' +'I' +'I'
+    while (num >= arabic[i]){
+      hasil = hasil + romawi[i] // ini misalkan 4, '' + romawi[i], maka saat masuk ke bawah dia sudah selesai (4-4 = 0)  0 tdk masuk ke kondisi while
+      num = num - arabic[i] // Ex angkanya 3 => 3 -1 jadilah 'I', 2 - 1 jadilah 'I', 1 = i > '1'
+    }
+  }
+  return hasil
 }
 
 // Drive code
